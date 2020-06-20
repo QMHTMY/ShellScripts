@@ -1,0 +1,38 @@
+#!/bin/bash
+set -euxo pipefail
+# 转换flv/avi/mkv/mpeg/rmvb等格式视频为mp4格式，若无参数则转换当前目录所有视频
+
+function convert2mp4() {
+    if   [ ${1##*.} = "flv" ]
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "avi" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "mkv" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "mpg" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "mpeg" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "rmvb" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    elif [ ${1##*.} = "wmv" ] 
+        then
+            ffmpeg -i ${1} -c copy -map 0 ${1%.*}.mp4 2>/dev/null
+    fi
+}
+
+if [ -n "${1}" ] #有参数，直接转换
+    then
+        convert2mp4 ${1}
+else             #无参数，转换当前目录所有视频为mp4
+    for file in `ls .`
+    do 
+        convert2mp4 ${file}
+    done
+fi

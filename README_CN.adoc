@@ -1,0 +1,66 @@
+= 实用Shell脚本
+Shieber
+
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+:uri-license: https://github.com/QMHTMY/ShellScripts/blob/master/LICENSE
+:uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
+
+== 兼容系统
+* Linux 
+* Mac OS
+
+== 描述
+[link:README.adoc[English]] 一些Shell脚本。
+
+== 脚本
+. Convert2mp4 - 用ffmpeg将flv/avi/mkv/mpeg/rmvb格式视频转换为mp4 
+. Convert2pdf - 用pandoc将txt/html/docx/markdown/restructuredText文档转换为pdf
+. Eog - 使用eog打开图片(png/jpg/jpeg/gif)
+. Flash - 刷新交换分区
+. Git - 推送代码到多个平台
+. Html2txt - 从html中提取文件内容为txt格式 
+. Killcmd - 输入命令名称(不用输完整的，只要确保惟一)以杀死进程
+. opHttpSrv - 利用python开启一个Http server，用于在局域网内分享文件
+. pdf - 打开pdf文件
+. Pidinfo - 输入PID以获取进程信息
+. Rm - /bin/rm的别称，该命令不删除而是将文件移动到/home/usrname/Trash中，防止误删
+. SystemInfo - 获取系统信息
+. Video2radio - 提取视频中的音频
+. Videocombine - 合并2个mp4视频为一个
+. Wechat - 用firefox打开网页版微信
+. YougetVideo - 用you-get从url下载音/视频/图片
+
+== 使用(将这些命令加入/usr/local/bin/)
+. Convert2mp4 - `Convert2mp4 video.flv`
+. Convert2pdf - `Convert2pdf file.txt/file.md/file.rst/file.docx`
+. Eog - `Eog picture.png`
+. Flash - `Flash`
+. Git - `Git`
+. Html2txt - `Html2txt file.html | ./Html2txt`
+. Killcmd  - `Killcmd xelatex`
+. opHttpSrv - `opHttpSrv`
+. pdf - `pdf file.pdf`
+. Pidinfo - `Pidinfo 6789`
+. Rm - `Rm file`
+. SystemInfo - `SystemInfo`
+. Video2radio - `Video2radio video.mp4`
+. Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
+. Wechat - `Wechat`
+. YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url`
+
+== 参考资料
+* https://ffmpeg.org[ffmpeg]
+* https://pandoc.org[pandoc]
+* https://github.com/soimort/you-get[you-get]
+
+== 版权声明
+Copyright (C) 2019-2020 Shieber，在 link:LICENSE[APACHE LICENSE]下开源。

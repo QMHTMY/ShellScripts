@@ -1,0 +1,26 @@
+#!/bin/bash
+# 根据用户输入的PID，过滤出该PID所有的信息
+
+pid=$1
+if [ ! -n "$pid" ]
+then
+    echo "Usage: ${0##*/} PID"
+    exit 1
+fi
+
+n=`ps -aux| awk '$2~/^'$pid'$/{print $11}'|wc -l`
+if [ $n -eq 0 ];then
+    echo "PID does not exist！！"
+    exit 1
+fi
+
+echo "PID: $pid"
+echo "Cmd：`ps -aux| awk '$2~/^'$pid'$/{print $11}'`"
+echo "Usr: `ps -aux| awk '$2~/^'$pid'$/{print $1}'`"
+echo "CPU：`ps -aux| awk '$2~/^'$p'$/{print $3}'`%"
+echo "Mem：`ps -aux| awk '$2~/^'$pid'$/{print $4}'`%"
+echo "Vmem：`ps -aux| awk '$2~/^'$pid'$/{print $5}'`"
+echo "Smem：`ps -aux| awk '$2~/^'$pid'$/{print $6}'`"
+echo "Start：`ps -aux| awk '$2~/^'$pid'$/{print $9}'`"
+echo "Durat：`ps -aux| awk '$2~/^'$pid'$/{print $10}'`"
+echo "State：`ps -aux| awk '$2~/^'$pid'$/{print $8}'`"

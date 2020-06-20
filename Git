@@ -1,0 +1,5 @@
+#!/bin/bash
+#一步推送代码到多个源代码网站
+
+git push gitee master
+git push github master

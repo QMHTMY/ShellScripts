@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euxo pipefail
+
+#安全删除文件，将rm给管起来，误删可恢复
+#需要在某处创建一个垃圾箱目录如/home/username/Trash
+
+TRASH_DIR="/home/username/Trash"
+for file in $*;do
+	STAMP=`date +%s`
+	filename=`basename $file`
+	mv $file $TRASH_DIR/$filename.$STAMP
+done

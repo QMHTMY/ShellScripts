@@ -1,0 +1,17 @@
+#!/bin/bash
+# 用you-get下载神器下载视频，
+# 1.可以按url逐个下载视频文件，url放到某文件里，如:bilibili.url
+# 2.可以直接输入按url下载视频文件
+
+if [ ! -n "${1}" ] #无参数，显示用法
+    then
+        echo "Usage1: ${0##*/} https://www.youtube.com/xxxx"
+        echo "Usage2: ${0##*/} xxx.url"
+elif [ -f "${1}" ] #参数为url文件，逐个下载
+    while read url
+    do
+        you-get ${url}
+    done < ${1}
+else               #参数为url，直接下载
+    you-get ${1}
+fi

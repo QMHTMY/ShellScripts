@@ -1,0 +1,39 @@
+#!/bin/bash
+set -euxo pipefail
+# 从视频文件中提取出音频
+
+function convert2radio() {
+    if   [ ${1##*.} = "flv" ]
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "avi" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "mkv" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "mpg" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "mpeg" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "rmvb" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    elif [ ${1##*.} = "wmv" ] 
+        then
+            ffmpeg -i ${file} -f mp3 -vn ${file%.*}.mp3 2>/dev/null
+    fi
+}
+
+
+if [ -n "${1}" ] #有参数，直接提取
+    then
+        convert2radio ${1}
+else             #无参数，提取当前目录所有
+    for file in `ls .`
+    do 
+        convert2radio ${file}
+    done
+fi

@@ -1,0 +1,33 @@
+#!/bin/bash
+# 转换txt/html/docx/markdown/restrucetedText格式文档为pdf
+
+function convert2pdf() {
+    pandoc -N -s --toc --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Monaco" -V geometry:margin=2in ${1} -o "${1%.*}.pdf" 1>/dev/null 2>&1
+}
+
+
+startTime=`date +%s`
+
+if [ ! -n "$1" ]    #无参数，显示用法
+    then
+        echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
+        echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
+        exit 1
+elif [ -f "${1}" ]  #有参数，且为文件
+    if [ "${1##*.}" = "txt" ]
+	    then
+            convert2pdf ${1}
+    fi
+else                #有参数，且为格式，如md/rst/txt/html 则转换目录下所有该格式文件为pdf
+    for file in `ls .`
+    do 
+	    if [ "${file##*.}" = "txt" ]
+	    then
+            convert2pdf ${file}
+	    fi
+    done
+fi
+
+endTime=`date +%s`
+sumTime=$[ $endTime - $startTime ] 
+echo "耗时: $sumTime(秒)"

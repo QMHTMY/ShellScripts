@@ -1,0 +1,5 @@
+#!/bin/bash
+#刷新交换分区内容回硬盘并重开交换分区
+
+echo 'your-password' | sudo -S swapoff -a 
+sudo swapon -a

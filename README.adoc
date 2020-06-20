@@ -1,0 +1,67 @@
+= Some shell scipts
+Shieber
+
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+:uri-license: https://github.com/QMHTMY/ShellScripts/blob/master/LICENSE
+:uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
+
+== Compatible OS 
+* Linux 
+* Mac OS
+
+== Description
+[link:README_CN.adoc[中文]] some shell scripts which can help you live a convenient life.
+
+== Including 
+. Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
+. Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
+. Eog - use eog to open a picture (png/jpg/jpeg/gif)
+. Flash - clear out Swap
+. Git - push source code to multi-platform repository
+. Html2txt - extract content from html file and save to text 
+. Killcmd - kill a background job
+. opHttpSrv - open a small http server
+. pdf - open a pdf file
+. Pidinfo - get the information of the process wiht PID
+. Rm - alias of /bin/rm which can help you delete files safely
+. SystemInfo - get te System information
+. Video2radio - extract radio content from video
+. Videocombine - combine 2 video into single one
+. Wechat - open Tencent Wechat on web
+. YougetVideo - use you-get to download radio/video/image with url
+
+== Usage (add these scripts to /usr/local/bin/)
+. Convert2mp4 - `Convert2mp4 video.flv`
+. Convert2pdf - `Convert2pdf file.txt/file.md/file.rst/file.docx`
+. Eog - `Eog picture.png`
+. Flash - `Flash`
+. Git - `Git`
+. Html2txt - `Html2txt file.html | ./Html2txt`
+. Killcmd  - `Killcmd xelatex`
+. opHttpSrv - `opHttpSrv`
+. pdf - `pdf file.pdf`
+. Pidinfo - `Pidinfo 6789`
+. Rm - `Rm file`
+. SystemInfo - `SystemInfo`
+. Video2radio - `Video2radio video.mp4`
+. Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
+. Wechat - `Wechat`
+. YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url`
+
+== Reference
+* https://ffmpeg.org[ffmpeg]
+* https://pandoc.org[pandoc]
+* https://github.com/soimort/you-get[you-get]
+
+== Copyright
+Copyright (C) 2019-2020 Shieber. +
+See the link:LICENSE[LICENSE] file for free use of these scripts granted under the terms of the Apache License.
