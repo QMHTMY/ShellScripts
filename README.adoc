@@ -14,12 +14,46 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/ShellScripts/blob/master/LICENSE
 :uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
 
+== Description
+[link:README_CN.adoc[中文]] some shell scripts which can help you live a convenient life.
+
 == Compatible OS 
 * Linux 
 * Mac OS
 
-== Description
-[link:README_CN.adoc[中文]] some shell scripts which can help you live a convenient life.
+== Dependencies
+* atril
+* lynx 
+* ffmpeg
+* mencoder
+* pandoc
+* you-get
+* texlive
+
+== Installation
+.Installation 
+----
+atril
+    sudo apt install atril
+
+lynx 
+    sudo apt install lynx
+
+ffmpeg
+    sudo apt install ffmpeg
+
+pandoc
+    sudo apt install pandoc
+
+mencoder
+    sudo apt install mencoder
+
+you-get
+    sudo pip3 insatll you-get
+
+texLive
+    see http://tug.org/texlive/ #this is rather complex and time consuming
+----
 
 == Including 
 . Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
@@ -60,6 +94,7 @@ endif::[]
 == Reference
 * https://ffmpeg.org[ffmpeg]
 * https://pandoc.org[pandoc]
+* http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
 
 == Copyright

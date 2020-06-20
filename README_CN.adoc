@@ -14,14 +14,48 @@ endif::[]
 :uri-license: https://github.com/QMHTMY/ShellScripts/blob/master/LICENSE
 :uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
 
+== 描述
+[link:README.adoc[English]] 一些Shell脚本。
+
 == 兼容系统
 * Linux 
 * Mac OS
 
-== 描述
-[link:README.adoc[English]] 一些Shell脚本。
+== 依赖
+* atril
+* lynx 
+* ffmpeg
+* mencoder
+* pandoc
+* you-get
+* texlive
 
-== 脚本
+== 安装
+.Installation 
+----
+atril
+    sudo apt install atril
+
+lynx 
+    sudo apt install lynx
+
+ffmpeg
+    sudo apt install ffmpeg
+
+pandoc
+    sudo apt install pandoc
+
+mencoder
+    sudo apt install mencoder
+
+you-get
+    sudo pip3 insatll you-get
+
+texLive
+    参见 http://tug.org/texlive/ #安装负责，费时，但是按好用起也舒服。
+----
+
+== 脚本功能
 . Convert2mp4 - 用ffmpeg将flv/avi/mkv/mpeg/rmvb格式视频转换为mp4 
 . Convert2pdf - 用pandoc将txt/html/docx/markdown/restructuredText文档转换为pdf
 . Eog - 使用eog打开图片(png/jpg/jpeg/gif)
@@ -45,7 +79,7 @@ endif::[]
 . Eog - `Eog picture.png`
 . Flash - `Flash`
 . Git - `Git`
-. Html2txt - `Html2txt file.html | ./Html2txt`
+. Html2txt - `Html2txt file.html | Html2txt` #可带也可不带参数，不带处理目录下所有html
 . Killcmd  - `Killcmd xelatex`
 . opHttpSrv - `opHttpSrv`
 . pdf - `pdf file.pdf`
@@ -55,11 +89,12 @@ endif::[]
 . Video2radio - `Video2radio video.mp4`
 . Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
 . Wechat - `Wechat`
-. YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url`
+. YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url` #可用url或把url写入video.url
 
 == 参考资料
 * https://ffmpeg.org[ffmpeg]
 * https://pandoc.org[pandoc]
+* http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
 
 == 版权声明
