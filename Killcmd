@@ -2,9 +2,8 @@
 #set -euxo pipefail
 #输入命令的名称(可以只是一部分)，自动杀死其进程
 
-if [ ! -n "$1" ] #无参数，显示用法
-    then
-        echo "Usage: ${0##*/} cmd"
+if [ ! -n "$1" ]; then #无参数，显示用法
+    echo "Usage: ${0##*/} cmd"
 else             #有参数，查找并杀死
     pid=`ps -aux | grep $1 | head -n 1 | awk '{print $2}'`
     kill -9 ${pid}

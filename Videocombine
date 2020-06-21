@@ -1,14 +1,12 @@
 #!/bin/bash
 # 合并两个mp4视频文件为一个
 
-if [ $# -ne 3 ]
-    then
-        echo "Usage: ${0##*/} input1.mp4 input2.mp4 output.mp4" 
+if [ $# -ne 3 ]; then
+    echo "Usage: ${0##*/} input1.mp4 input2.mp4 output.mp4" 
 else
     for video in $*
     do 
-        if [ "${video##*.}" != "mp4" ]
-        then
+        if [ "${video##*.}" != "mp4" ]; then
             echo "Usage: ${0##*/} video1.mp4 vedeo2.mp4 output.mp4"
             exit 1
         fi

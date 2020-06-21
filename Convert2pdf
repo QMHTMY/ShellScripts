@@ -1,47 +1,39 @@
 #!/bin/bash
+#set -euxo pipefail
 # 转换txt/html/docx/markdown/restrucetedText/asciidoc格式文档为pdf
 
 function convert2pdf() {
-    pandoc -N -s --toc --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Monaco" -V geometry:margin=2in ${1} -o "${1%.*}.pdf" 1>/dev/null 2>&1
+    pandoc -N -s --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Times New Roman" ${1} -o "${1%.*}.pdf"
 }
 
 
 startTime=`date +%s`
 
-if [ ! -n "$1" ]    #无参数，显示用法
-    then
-        echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
-        echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
-        exit 1
-elif [ -f "${1}" ]  #有参数，且为文件
-    if [ "${1##*.}" = "txt" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "html" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "doc" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "docx" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "md" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "rst" ]
-        then
-            convert2pdf ${1}
-    elif [ "${1##*.}" = "adoc" ]
-        then
-            convert2pdf ${1}
+if [ ! -n "$1" ]; then    #无参数，显示用法
+    echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
+    echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
+    exit 1
+elif [ -f "${1}" ]; then  #有参数，且为文件
+    if   [ "${1##*.}" = "txt"  ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "html" ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "doc"  ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "docx" ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "md"   ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "rst"  ]; then
+        convert2pdf ${1}
+    elif [ "${1##*.}" = "adoc" ]; then
+        convert2pdf ${1}
     fi
-else                #有参数，且为格式，则转换目录下所有该格式文件为pdf
+else                      #有参数，且为格式，则转换目录下所有该格式文件为pdf
     for file in `ls .`
-    do 
-        if [ "${file##*.}" = "${1}" ]
-            then
-                convert2pdf ${file}
+    do
+        if [ "${file##*.}" = "${1}" ]; then
+            convert2pdf ${file}
         fi
     done
 fi

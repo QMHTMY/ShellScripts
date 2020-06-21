@@ -2,14 +2,12 @@
 #用atril打开pdf文件并放到后台运行
 #Ctrl + W可关闭文件
 
-if [ ! -n "$1" ] #无参数，显示用法
-    then
-        echo "Usage: ${0##*/} xxx.pdf"
-        exit 1
-else             #有参数，打开文件
-    if [ "${1##*.}" = "pdf" ]
-        then
-            atril $1 >/dev/null 2>&1 &  #用atril打开pdf，忽略各种错误信息
+if [ ! -n "$1" ]; then #无参数，显示用法
+    echo "Usage: ${0##*/} xxx.pdf"
+    exit 1
+else                   #有参数，打开文件
+    if [ "${1##*.}" = "pdf" ]; then
+        atril $1 >/dev/null 2>&1 &  #用atril打开pdf，忽略各种错误信息
     else
         echo 'Wrong file format, need [xxx.pdf]'
         exit 1
