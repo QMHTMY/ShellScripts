@@ -53,7 +53,7 @@ you-get
 
 texLive
     参见 http://tug.org/texlive/ #安装复杂，费时，但是按好用起也舒服。
-    或见 https://blog.csdn.net/Shieber/article/details/93716448，我已把安装所有步骤写好。
+    或见 https://blog.csdn.net/Shieber/article/details/93716448，我已把所有安装步骤写好。
 ----
 
 == 脚本功能

@@ -1,14 +1,13 @@
 #!/bin/bash
-#set -euxo pipefail
+# set -euxo pipefail
 # 转换txt/html/docx/markdown/restrucetedText/asciidoc格式文档为pdf
+# 中文字体时楷体，英文字体时Times Newer Roman
 
 function convert2pdf() {
-    pandoc -N -s --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Times New Roman" ${1} -o "${1%.*}.pdf"
+    pandoc -s --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Times Newer Roman" ${1} -o "${1%.*}.pdf"
 }
 
-
 startTime=`date +%s`
-
 if [ ! -n "$1" ]; then    #无参数，显示用法
     echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
     echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
