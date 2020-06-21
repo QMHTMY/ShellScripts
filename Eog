@@ -3,7 +3,7 @@
 
 if [ ! -n "$1" ] #无参数，显示用法
     then
-        echo "Usage: ${0##*/} xxx.[png|jpeg|jpg]"
+        echo "Usage: ${0##*/} picture.[png|jpeg|jpg]"
 else             #有参数，判断输入参数格式是否为图片并打开
     if [ ${1##*.} = "png" ]
         then
@@ -18,6 +18,6 @@ else             #有参数，判断输入参数格式是否为图片并打开
         then
             eog $1 >/dev/null 2>&1 &
     else
-        echo 'Wrong format, file must end with [png, jpeg, jgp...]'
+        echo 'Wrong format, file must end with [png, jpg, jgep, gif]'
     fi
 fi

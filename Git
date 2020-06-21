@@ -1,5 +1,6 @@
 #!/bin/bash
-#一步推送代码到多个源代码网站
+#一步推送代码到多个源代码网站，下面gitee和github需要自己修改，
+#比如你可能不用gitee而是用coding，那就换成coding
 
 git push gitee master
 git push github master

@@ -3,15 +3,15 @@
 
 if [ $# -ne 3 ]
     then
-        echo "Usage: ${0##*/} input1.mp4 input2.mp4 output.mp4"
+        echo "Usage: ${0##*/} input1.mp4 input2.mp4 output.mp4" 
 else
-    for file in $*
+    for video in $*
     do 
-        if [ "${file##*.}" != "mp4" ]
+        if [ "${video##*.}" != "mp4" ]
         then
-            echo "Usage: ${0##*/} input1.mp4 input2.mp4 output.mp4"
+            echo "Usage: ${0##*/} video1.mp4 vedeo2.mp4 output.mp4"
             exit 1
         fi
     done
-    mencoder -ovc copy -oac mp3lame $1 $2 -o $3
+    mencoder -ovc copy -oac mp3lame $1 $2 -o $3 1>/dev/null 2>&1
 fi

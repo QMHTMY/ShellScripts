@@ -1,5 +1,11 @@
 #!/bin/bash
 #刷新交换分区内容回硬盘并重开交换分区
 
-echo 'your-password' | sudo -S swapoff -a 
-sudo swapon -a
+if [ ! -n "$1" ] #无参数，显示用法
+    then
+        echo "Usage: ${0##*/} root-passwd"
+else
+    echo "${1}" | sudo -S swapoff -a 
+    sudo swapon -a
+    echo "Swap cleaned"
+fi

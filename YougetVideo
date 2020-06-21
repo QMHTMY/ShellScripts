@@ -7,11 +7,11 @@ if [ ! -n "${1}" ] #无参数，显示用法
     then
         echo "Usage1: ${0##*/} https://www.youtube.com/xxxx"
         echo "Usage2: ${0##*/} xxx.url"
-elif [ -f "${1}" ] #参数为url文件，逐个下载
+elif [ -f "${1}" ] #参数为url文件，逐个下载 #参数为url，直接下载
     while read url
     do
-        you-get ${url}
+        you-get ${url} >/dev/null 2>&1
     done < ${1}
-else               #参数为url，直接下载
-    you-get ${1}
+else
+    you-get ${1} >/dev/null 2>&1
 fi
