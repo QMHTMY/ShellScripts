@@ -4,7 +4,7 @@
 
 if [ ! -n "$1" ]; then #无参数，显示用法
     echo "Usage: ${0##*/} cmd"
-else             #有参数，查找并杀死
+else                   #有参数，查找并杀死
     pid=`ps -aux | grep $1 | head -n 1 | awk '{print $2}'`
     kill -9 ${pid}
 fi

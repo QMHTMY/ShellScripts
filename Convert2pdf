@@ -1,13 +1,14 @@
 #!/bin/bash
 # set -euxo pipefail
 # 转换txt/html/docx/markdown/restrucetedText/asciidoc格式文档为pdf
-# 中文字体时楷体，英文字体时Times Newer Roman
+# 中文字体是楷体，英文字体是Times Newer Roman，若无字体则需安装
 
 function convert2pdf() {
     pandoc -s --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Times Newer Roman" ${1} -o "${1%.*}.pdf"
 }
 
-startTime=`date +%s`
+startTime=`date +%s`      #计时开始
+
 if [ ! -n "$1" ]; then    #无参数，显示用法
     echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
     echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
@@ -37,6 +38,6 @@ else                      #有参数，且为格式，则转换目录下所有�
     done
 fi
 
-endTime=`date +%s`
+endTime=`date +%s`         #计时结束
 sumTime=$[ $endTime - $startTime ] 
 echo "耗时: $sumTime(秒)"
