@@ -1,0 +1,21 @@
+#!/bin/bash
+#查找某日期距离今天的天数(可前也可后)
+#用零时时间戳计算，不用考虑小数问题
+
+if [ ! -n "$1" ]; then                              #无参数，显示用法
+    echo "Usage: ${0##*/} [2020-01-01]"
+else                                                #有参数，转换为对应时间戳
+    timeStampInput=`date -d $1 +%s`                 #输入日期零时时间戳
+
+    Today=`date +%Y-%m-%d`                          #今日日期
+    timeStampToday=`date -d $Today +%s`             #今日零时时间戳
+
+    if [ $timeStampToday -ge $timeStampInput ]; then  #以前时间
+        days=$[ ($timeStampToday - $timeStampInput) / 86400 ] #计算天数
+        days="$days天前"                 
+    else                                              #未来时间(含今天)
+        days=$[ ($timeStampInput - $timeStampToday) / 86400 ] #计算天数
+        days="$days天后"                 
+    fi
+    echo $days
+fi
