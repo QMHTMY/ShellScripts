@@ -8,6 +8,7 @@ USERNAME=`logname`
 TRASH_DIR="/home/$USERNAME/Trash"
 if [ ! -d "$TRASH_DIR" ]; then
     mkdir -p "$TRASH_DIR"
+    echo "删除文件存放在$TRASH_DIR"
 fi
 
 #给文件添加时间戳并移动到TRASH_DIR
