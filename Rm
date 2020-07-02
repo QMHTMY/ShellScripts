@@ -3,9 +3,16 @@
 #安全删除文件，将rm给管起来，误删可恢复
 #需要在某处创建一个垃圾箱目录如/home/username/Trash
 
-TRASH_DIR="/home/username/Trash"
-for file in $*;do
+#判断目录是否存在，不存在则创建
+USERNAME=`logname`
+TRASH_DIR="/home/$USERNAME/Trash"
+if [ ! -d "$TRASH_DIR" ]; then
+    mkdir -p "$TRASH_DIR"
+fi
+
+#给文件添加时间戳并移动到TRASH_DIR
+for file in $*; do
 	STAMP=`date +%s`
-	filename=`basename $file`
-	mv $file $TRASH_DIR/$filename.$STAMP
+	FILENAME=`basename $file`
+	mv $file $TRASH_DIR/$FILENAME.$STAMP
 done
