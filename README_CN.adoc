@@ -76,9 +76,9 @@ texLive
 . Video2radio - 提取视频中的音频
 . Videocombine - 合并2个mp4视频为一个
 . Wechat - 用firefox打开网页版微信，可替换城chrome
-. YougetVideo - 用you-get从url火url文件下载音/视频/图片
+. YougetVideo - 用you-get从url或url文件下载音/视频/图片
 
-== 使用(将这些命令加入/usr/local/bin/)
+== 用法 (最好将这些命令加入/usr/local/bin/)
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt/file.md/file.rst/file.docx`
 . Daysdiff - `Daysdiff 2020-06-30`
