@@ -22,6 +22,7 @@ endif::[]
 * Mac OS
 
 == Dependencies
+* eog
 * atril
 * lynx 
 * ffmpeg
