@@ -33,6 +33,9 @@ endif::[]
 == Installation
 .Installation 
 ----
+eog
+    sudo apt install eog
+
 atril
     sudo apt install atril
 
@@ -64,8 +67,8 @@ texLive
 . Git - push source code to multi-platform repository
 . Html2txt - extract content from html file and save to text 
 . Killcmd - kill a background job
-. opHttpSrv - open a small http server
-. pdf - open a pdf file
+. OpenHttpSrv - open a small http server to share files
+. Pdf - open a pdf file on cmd
 . Pidinfo - get the information of the process wiht PID
 . Rm - alias of /bin/rm which can help you delete files safely
 . SystemInfo - get te System information
@@ -83,8 +86,8 @@ texLive
 . Git - `Git`
 . Html2txt - `Html2txt file.html / Html2txt`
 . Killcmd  - `Killcmd xelatex`
-. opHttpSrv - `opHttpSrv`
-. pdf - `pdf file.pdf`
+. OpenHttpSrv - `OpenHttpSrv`
+. Pdf - `Pdf file.pdf`
 . Pidinfo - `Pidinfo 6789`
 . Rm - `Rm xxx-file`
 . SystemInfo - `SystemInfo`

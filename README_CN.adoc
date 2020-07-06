@@ -33,6 +33,9 @@ endif::[]
 == 安装
 .Installation 
 ----
+eog
+    sudo apt install eog
+
 atril
     sudo apt install atril
 
@@ -65,8 +68,8 @@ texLive
 . Git - 推送代码到多个平台
 . Html2txt - 从html中提取文件内容为txt格式 
 . Killcmd - 输入命令名称(不用输完整的，只要确保惟一)以杀死进程
-. opHttpSrv - 利用python开启一个Http server，用于在局域网内分享文件
-. pdf - 打开pdf文件
+. OpenHttpSrv - 利用python开启一个Http server，用于在局域网内分享文件
+. Pdf - 打开pdf文件
 . Pidinfo - 输入PID以获取进程信息
 . Rm - /bin/rm的别称，该命令不删除而是将文件移动到/home/usrname/Trash中，防止误删
 . SystemInfo - 获取系统信息
@@ -84,8 +87,8 @@ texLive
 . Git - `Git`
 . Html2txt - `Html2txt file.html | Html2txt` #不带参数则默认处理目录下所有html
 . Killcmd  - `Killcmd xelatex`
-. opHttpSrv - `opHttpSrv`
-. pdf - `pdf xxx-file.pdf`
+. OpenHttpSrv - `OpenHttpSrv`
+. Pdf - `Pdf xxx-file.pdf`
 . Pidinfo - `Pidinfo 6789`
 . Rm - `Rm file`
 . SystemInfo - `SystemInfo`
