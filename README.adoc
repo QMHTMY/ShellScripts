@@ -58,7 +58,7 @@ texLive
 == Including 
 . Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
 . Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
-. Daysago - return days between today and a specified date
+. Daysdiff - return days between today and a specified date
 . Eog - use eog to open a picture (png/jpg/jpeg/gif) and avoid the errors message
 . Flash - clear out Swap space
 . Git - push source code to multi-platform repository
@@ -77,7 +77,7 @@ texLive
 == Usage (add these scripts to /usr/local/bin/)
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt|file.md|file.rst|file.docx`
-. Daysago - `Daysago 2020-06-30`
+. Daysdiff - `Daysdiff 2020-06-30`
 . Eog - `Eog picture.png`
 . Flash - `Flash`
 . Git - `Git`
