@@ -23,6 +23,7 @@ endif::[]
 
 == 依赖
 * eog
+* axel
 * atril
 * lynx 
 * ffmpeg
@@ -34,8 +35,11 @@ endif::[]
 == 安装
 .Installation 
 ----
-eog
+aog
     sudo apt install eog
+
+axel
+    sudo apt install axel
 
 atril
     sudo apt install atril
@@ -67,6 +71,7 @@ texLive
 . Eog - 使用eog打开图片(png/jpg/jpeg/gif)，同时避免出现错误信息
 . Flash - 刷新交换分区
 . Git - 推送代码到多个平台
+. Getgitraw - 通过url从命令行下载github某账户仓库中的单个文件
 . Html2txt - 从html中提取文件内容为txt格式 
 . Killcmd - 输入命令名称(不用输完整的，只要确保惟一)以杀死进程
 . OpenHttpSrv - 利用python开启一个Http server，用于在局域网内分享文件
@@ -86,6 +91,7 @@ texLive
 . Eog - `Eog picture.png`
 . Flash - `Flash`
 . Git - `Git`
+. Getgitraw - `Getgitraw https://github.com/user/repository/filename` 
 . Html2txt - `Html2txt file.html | Html2txt` #不带参数则默认处理目录下所有html
 . Killcmd  - `Killcmd xelatex`
 . OpenHttpSrv - `OpenHttpSrv`
