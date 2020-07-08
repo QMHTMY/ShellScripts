@@ -1,0 +1,12 @@
+#!/bin/bash
+#输入git上某文件链接，提取其raw下载路径并自动下载
+
+sample='https://github.com/user/repository/blob/master/filename'
+prefix="https://raw.githubusercontent.com/"
+
+if [ ! -n "${1}" ]; then           #无参数，显示用法
+    echo "Usage: ${0##*/} $sample"
+else                               #参数为url，构造下载地址并下载
+    suffix=`echo $1 | sed 's/https:\/\/github.com\///' | sed 's/blob\///'`
+    axel -a $prefix$suffix
+fi
