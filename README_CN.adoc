@@ -65,6 +65,7 @@ texLive
 ----
 
 == 脚本功能
+. Battery - 查看电池信息
 . Convert2mp4 - 用ffmpeg将flv/avi/mkv/mpeg/rmvb格式视频转换为mp4 
 . Convert2pdf - 用pandoc将txt/html/docx/markdown/restructuredText文档转换为pdf
 . Daysdiff - 计算输入日期和今日之间的天数
@@ -85,6 +86,7 @@ texLive
 . YougetVideo - 用you-get从url或url文件下载音/视频/图片
 
 == 用法 (最好将这些命令加入/usr/local/bin/)
+. Battery - `Battery`
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt/file.md/file.rst/file.docx`
 . Daysdiff - `Daysdiff 2020-06-30`
@@ -92,7 +94,7 @@ texLive
 . Flash - `Flash`
 . Git - `Git`
 . Getgitraw - `Getgitraw https://github.com/user/repository/filename` 
-. Html2txt - `Html2txt file.html | Html2txt` #不带参数则默认处理目录下所有html
+. Html2txt - `Html2txt file.html | Html2txt`
 . Killcmd  - `Killcmd xelatex`
 . OpenHttpSrv - `OpenHttpSrv`
 . Pdf - `Pdf xxx-file.pdf`
@@ -109,6 +111,7 @@ texLive
 * https://pandoc.org[pandoc]
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
+* https://samizdat.dev/help-message-for-shell-scripts/[Help message]
 
 == 版权声明
 Copyright (C) 2019-2020 Shieber，在 link:LICENSE[APACHE LICENSE]下开源。

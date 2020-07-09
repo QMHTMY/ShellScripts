@@ -64,6 +64,7 @@ texLive
 ----
 
 == Including 
+. Battery - show battery information
 . Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
 . Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
 . Daysdiff - return days between today and a specified date
@@ -84,6 +85,7 @@ texLive
 . YougetVideo - use you-get to download radio/video/image with url
 
 == Usage (add these scripts to /usr/local/bin/)
+. Battery - `Battery`
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt|file.md|file.rst|file.docx`
 . Daysdiff - `Daysdiff 2020-06-30`
@@ -108,6 +110,7 @@ texLive
 * https://pandoc.org[pandoc]
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
+* https://samizdat.dev/help-message-for-shell-scripts/[Help message]
 
 == Copyright
 Copyright (C) 2019-2020 Shieber. +
