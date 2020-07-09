@@ -3,15 +3,43 @@
 # 转换txt/html/docx/markdown/restrucetedText/asciidoc格式文档为pdf
 # 中文字体是楷体，英文字体是Times Newer Roman，若无字体则需安装
 
+### Description:
+###     Convert2pdf — use pandoc to convert file to PDF format
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+### Dependency:
+###     sudo apt install pandoc
+###
+### Usage:
+###     Convert2pdf <filename>
+###     Convert2pdf <format>
+###
+### Options:
+###     <fileanme>  Input a file.
+###     <format>    Input a file format to convert all to pdf.
+###     -h,--help   Show help message.
+###
+### Support formats 
+###     .txt .html .doc .docx .md .rst .adoc
+###
+### Example:
+###     Convert2pdf file.html
+###     Convert2pdf docx
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
 function convert2pdf() {
     pandoc -s --latex-engine=xelatex -V CJKmainfont="KaiTi" -V mainfont="Times Newer Roman" ${1} -o "${1%.*}.pdf"
 }
 
+
 startTime=`date +%s`      #计时开始
 
-if [ ! -n "$1" ]; then    #无参数，显示用法
-    echo "Usage1: ${0##*/} file.[txt|html|docx|md|rst]"
-    echo "Usage2: ${0##*/} [txt|html|docx|md|rst]"
+if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
     exit 1
 elif [ -f "${1}" ]; then  #有参数，且为文件
     if   [ "${1##*.}" = "txt"  ]; then

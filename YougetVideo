@@ -1,20 +1,43 @@
 #!/bin/bash
-# 2020-06-21
 # 用you-get下载神器下载视频，
-
+# 按url逐个下载bilibili视频文件
 # sudo pip3 install you-get
-# 1.可以直接输入url下载视频文件，
-# 2.可以按url逐个下载视频文件，把url放到某文件里，
-#   一行一个视频url地址，具体格式如video.url
 
-if [ ! -n "${1}" ]; then  #无参数，显示用法
-    echo "Usage1: ${0##*/} https://www.youtube.com/xxxx"
-    echo "Usage2: ${0##*/} xxx.url"
-elif [ -f "${1}" ]; then  #参数为url文件，逐个下载 
+### Description:
+###     YougetVideo — Download video, radio from websites based on you-get
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+### Denpendency:
+###     sudo pip3 install you-get
+###
+### Usage:
+###     YougetVideo <video_url>
+###     YougetVideo <video.url>
+###
+### Options:
+###     <video_url> Input a video/radio url.
+###     <video.url> Input a file contains video/radio urls (each row an url).
+###     -h,--help   Show help message.
+###
+### Example:
+###     YougetVideo https://www.youtube.com/xxx
+###     YougetVideo video.url
+###
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+
+if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+elif [ -f "${1}" ]; then     #url files，download one by one
     while read url
     do
-        you-get ${url}
+        you-get --no-caption ${url}
     done < ${1}
-else                      #参数为url，直接下载
-    you-get ${1}
+else                         #url, download
+    you-get --no-caption  ${1}
 fi

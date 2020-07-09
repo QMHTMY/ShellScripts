@@ -1,8 +1,31 @@
 #!/bin/bash
 #刷新交换分区内容回硬盘并重开交换分区
 
-if [ ! -n "$1" ]; then #无参数，显示用法
-    echo "Usage: ${0##*/} root-passwd"
+### Description:
+###     Flash — refesh PC Swap space
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+###
+### Usage:
+###     Flash <password>
+###
+### Options:
+###     <password>  Input your sudo password
+###     -h,--help   Show help message.
+###
+###
+### Example:
+###     Flash my-password
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+
+if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
 else
     echo "${1}" | sudo -S swapoff -a 
     sudo swapon -a

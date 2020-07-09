@@ -1,9 +1,30 @@
 #!/bin/bash
 #查看系统信息，需要输入root密码作为参数
 
-if [ ! -n "$1" ]; then  #无参数，显示用法
-    echo "Usage: ${0##*/} root-passwd"
-else
+### Description:
+###     SystemInfo — show system information
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+###
+### Usage:
+###     SystemInfo  <passwd>
+###
+### Options:
+###     <passwd>     Input your sudo password.
+###     -h,--help   Show help message.
+###
+### Support Info: 
+###     PC brand, Memory, CPU, Kernel, OS, Hardware 
+###
+### Example:
+###     SystemInfo my-password
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+function systemInfo() {
     echo "1. equipment brand: `echo ${1}|sudo -S dmidecode -s system-product-name`"
     echo "2. OS info: `echo ${1}|sudo -S lsb_release -d | grep "Description"|awk -F: '{print $2}'`"
     echo "3. kernel info: `uname -s -m -r`"
@@ -17,4 +38,11 @@ else
     echo "6. memory slots and size: `echo ${1}|sudo -S dmidecode|grep -P -A5 "Memory Device" |grep Size | uniq`"
     echo "7. maximum capacity of memory: `echo ${1}|sudo -S dmidecode -t memory |grep "Maximum Capacity"| awk -F: '{print $2}'`"
     echo "8. memory `echo ${1}|sudo -S dmidecode|grep -A16 "Memory Device"|grep 'Speed' | uniq`"
+}
+
+if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+else
+    systemInfo $1
 fi

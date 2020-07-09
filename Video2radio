@@ -2,6 +2,33 @@
 #set -euxo pipefail
 # 从视频文件中提取出音频
 
+### Description:
+###     Video2radio — use ffmpeg to extract radio from video.
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+### Denpendency:
+###     sudo apt install ffmpeg 
+### 
+### Usage:
+###     Video2radio <video>
+###
+### Options:
+###     <video>     Input a video.
+###     -h,--help   Show help message.
+###     If omit param, the default action is to extract radiro from all videoes on current dir
+###
+### Support formats 
+###     .avi .flv .mkv .mov .mpg .mp4 .mpeg .rmvb .wmv
+###
+### Example:
+###     Video2radio 
+###     Video2radio video.avi
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
 function convert2radio() {
     if   [ ${1##*.} = "mp4"  ]; then
         ffmpeg -i ${1} -f mp3 -vn ${1%.*}.mp3 2>/dev/null
@@ -23,9 +50,12 @@ function convert2radio() {
 }
 
 
-if [ -n "${1}" ]; then #有参数，直接提取
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+elif [ -n "${1}" ]; then #有参数，直接提取
     convert2radio ${1}
-else                   #无参数，提取当前目录所有
+else                     #无参数，提取当前目录所有
     for video in `ls .`
     do 
         convert2radio ${video}
