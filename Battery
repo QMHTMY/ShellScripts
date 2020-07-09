@@ -1,0 +1,31 @@
+#!/bin/bash
+# 查看电池信息
+
+### Description:
+###     Battery  — show battery information.
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+###
+### Usage:
+###     Battery [Options]
+###
+### Options:
+###     -h,--help   Show help message.
+###
+### Example:
+###     Battery 
+###     Battery -h
+###     Battery --help
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+
+if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+else
+    upower -i `upower -e | grep 'BAT'`
+fi
