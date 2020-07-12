@@ -36,8 +36,8 @@ if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
 elif [ -f "${1}" ]; then     #url files，download one by one
     while read url
     do
-        you-get --no-caption ${url}
+        you-get -l --no-caption ${url}
     done < ${1}
 else                         #url, download
-    you-get --no-caption  ${1}
+    you-get -l --no-caption  ${1}
 fi
