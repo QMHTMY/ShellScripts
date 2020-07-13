@@ -67,7 +67,7 @@ texLive
 . Battery - show battery information
 . Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
 . Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
-. Daysdiff - return days between today and a specified date
+. Daysdiff - return days duration between today and a specified date or between two specified dates
 . Eog - use eog to open a picture (png/jpg/jpeg/gif) and avoid the errors message
 . Flash - clear out Swap space
 . Git - push source code to multi-platform repository
@@ -88,7 +88,7 @@ texLive
 . Battery - `Battery`
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt|file.md|file.rst|file.docx`
-. Daysdiff - `Daysdiff 2020-06-30`
+. Daysdiff - `Daysdiff 2020-06-30 | Daysdiff 2020-06-30 2020-08-21`
 . Eog - `Eog picture.png`
 . Flash - `Flash`
 . Git - `Git`
