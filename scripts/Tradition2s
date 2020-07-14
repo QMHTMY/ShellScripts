@@ -1,0 +1,46 @@
+#!/bin/bash
+# 用opencc进行繁简转换
+# sudo apt install opencc
+
+### Description:
+###     Tradition2s — convert Traditional Chinese to Simplified Chinese.
+###
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+###
+### Usage:
+###     Tradition2s <t-chars>
+###     Tradition2s <ifile>           
+###     Tradition2s <ifile> <ofile>   
+###
+### Options:
+###     <t-chars>   Input traditional Chinese characters.
+###     <ifile>     Input a filename which contains Traditional Chinese characters.
+###     <ofile>     Input a filename for saving the output.
+###     -h,--help   Display help message.
+###
+### Example:
+###     Tradition2s 慶豐
+###     Tradition2s traditional.txt
+###     Tradition2s traditional.txt simplified.txt
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+
+if [[ $# == 0 ]] || [[ $# > 2 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+elif [[ $# == 1 ]]; then           #只有一个参数
+    if [[ -f $1 ]]; then           #若是文件，转换后输出到标准输出
+        opencc -c t2s -i $1                                                          
+    else                           #若是字符，转换后输出到标准输出
+        echo $1 | opencc -c t2s                                                      
+    fi                                                                               
+else                               #有两个参数
+    if [[ -f $1 ]]; then           #第一个参数为文件，转换后输出到第二个参数对应文件
+        opencc -c t2s -i $1 -o $2                                                    
+    else                           #第一个参数非文件，则报错                        
+        help
+    fi
+fi
