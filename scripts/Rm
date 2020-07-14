@@ -17,7 +17,7 @@
 ### Options:
 ###     <file>      Input a file to be deleteed.
 ###     <dir>       Input a directory to be deleted.
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###
 ### Example:
 ###     Rm file.pdf 

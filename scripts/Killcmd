@@ -14,7 +14,7 @@
 ###
 ### Options:
 ###     <process-name>  Input a process name.
-###     -h,--help       Show help message.
+###     -h,--help       Display help message.
 ###
 ### Example:
 ###     Killcmd firfox

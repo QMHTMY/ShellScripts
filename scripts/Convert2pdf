@@ -19,7 +19,7 @@
 ### Options:
 ###     <fileanme>  Input a file.
 ###     <format>    Input a file format to convert all to pdf.
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###
 ### Support formats 
 ###     .txt .html .doc .docx .md .rst .adoc

@@ -16,7 +16,7 @@
 ###
 ### Options:
 ###     <file>     Input a pdf file
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###
 ### Example:
 ###     Pdf file.pdf

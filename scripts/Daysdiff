@@ -18,7 +18,7 @@
 ###     <date>     Input a date.
 ###     <date1>    Input a beign date.
 ###     <date2>    Input a end date. 
-###     -h,--help  Show help message.
+###     -h,--help  Display help message.
 ###     
 ### Example:
 ###     Daysago 2020-01-01

@@ -18,7 +18,7 @@
 ###
 ### Options:
 ###     <video>     Input a video.
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###     If you omit Options, the default action is 
 ###     to convert all videoes on current dir to mp4.
 ###

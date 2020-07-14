@@ -19,7 +19,7 @@
 ###     <video1>     Input first video.
 ###     <video2>     Input second video.
 ###     <output>     Combined video.
-###     -h,--help    Show help message.
+###     -h,--help    Display help message.
 ###
 ### Support formats 
 ###     .avi .flv .mkv .mov .mpg .mp4 .mpeg .rmvb .wmv

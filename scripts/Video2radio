@@ -16,7 +16,7 @@
 ###
 ### Options:
 ###     <video>     Input a video.
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###     If omit param, the default action is to extract radiro from all videoes on current dir
 ###
 ### Support formats 

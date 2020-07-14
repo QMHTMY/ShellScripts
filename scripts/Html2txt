@@ -16,7 +16,7 @@
 ###
 ### Options:
 ###     <html>     Input a html file.
-###     -h,--help  Show help message.
+###     -h,--help  Display help message.
 ###     If omit parameters, the default action is to convert all html file to txt.
 ###
 ### Surport format:

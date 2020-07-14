@@ -19,7 +19,7 @@
 ### Options:
 ###     <video_url> Input a video/radio url.
 ###     <video.url> Input a file contains video/radio urls (each row an url).
-###     -h,--help   Show help message.
+###     -h,--help   Display help message.
 ###
 ### Example:
 ###     YougetVideo https://www.youtube.com/xxx
