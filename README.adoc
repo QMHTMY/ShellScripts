@@ -28,6 +28,7 @@ endif::[]
 * lynx 
 * ffmpeg
 * mencoder
+* opencc
 * pandoc
 * you-get
 * texlive
@@ -50,11 +51,14 @@ lynx
 ffmpeg
     sudo apt install ffmpeg
 
-pandoc
-    sudo apt install pandoc
-
 mencoder
     sudo apt install mencoder
+
+opencc
+    sudo apt install opencc
+
+pandoc
+    sudo apt install pandoc
 
 you-get
     sudo pip3 insatll you-get
@@ -78,6 +82,8 @@ texLive
 . Pdf - open a pdf file on cmd
 . Pidinfo - get the information of the process wiht PID
 . Rm - alias of /bin/rm which can help you delete files safely
+. Simple2t - convert Simplified Chinese to Traditional Chinese.
+. Trademarks - convert Traditional Chinese to Simplified Chinese. 
 . SystemInfo - get te System information
 . Video2radio - extract radio content from video
 . Videocombine - combine 2 video into single one
@@ -93,12 +99,14 @@ texLive
 . Flash - `Flash`
 . Git - `Git`
 . Getgitraw - `Getgitraw https://github.com/user/repository/filename` 
-. Html2txt - `Html2txt file.html / Html2txt`
+. Html2txt - `Html2txt file.html | Html2txt`
 . Killcmd  - `Killcmd xelatex`
 . OpenHttpSrv - `OpenHttpSrv`
 . Pdf - `Pdf file.pdf`
 . Pidinfo - `Pidinfo 6789`
 . Rm - `Rm xxx-file`
+. Simple2t - `Simple2t 庆丰 |Simple2t simple.txt |Simple2t simple.txt traditional.txt`
+. Tradition2s - `Tradition2s 庆丰 |Tradition2s tradition.txt |Tradition2s tradition.txt simple.txt`
 . SystemInfo - `SystemInfo`
 . Video2radio - `Video2radio video.mp4`
 . Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`

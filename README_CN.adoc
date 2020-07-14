@@ -28,6 +28,7 @@ endif::[]
 * lynx 
 * ffmpeg
 * mencoder
+* opencc
 * pandoc
 * you-get
 * texlive
@@ -50,11 +51,14 @@ lynx
 ffmpeg
     sudo apt install ffmpeg
 
-pandoc
-    sudo apt install pandoc
-
 mencoder
     sudo apt install mencoder
+
+opencc
+    sudo apt install opencc
+
+pandoc
+    sudo apt install pandoc
 
 you-get
     sudo pip3 insatll you-get
@@ -79,6 +83,8 @@ texLive
 . Pdf - 从命令行打开pdf文件，同时避免出现错误信息
 . Pidinfo - 输入PID以获取进程信息
 . Rm - /bin/rm的别称，该命令不删除而是将文件移动到/home/usrname/Trash中，防止误删
+. Simple2t - 转换简体中文为繁体中文
+. Trademarks - 转换繁体中文为简体中文 
 . SystemInfo - 获取系统信息
 . Video2radio - 提取视频中的音频
 . Videocombine - 合并两个mp4视频为一个
@@ -100,6 +106,8 @@ texLive
 . Pdf - `Pdf xxx-file.pdf`
 . Pidinfo - `Pidinfo 6789`
 . Rm - `Rm file`
+. Simple2t - `Simple2t 庆丰 |Simple2t simple.txt |Simple2t simple.txt traditional.txt`
+. Tradition2s - `Tradition2s 庆丰 |Tradition2s tradition.txt |Tradition2s tradition.txt simple.txt`
 . SystemInfo - `SystemInfo`
 . Video2radio - `Video2radio video.mp4`
 . Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
