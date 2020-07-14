@@ -69,19 +69,19 @@ texLive
 . Convert2mp4 - 用ffmpeg将flv/avi/mkv/mpeg/rmvb格式视频转换为mp4 
 . Convert2pdf - 用pandoc将txt/html/docx/markdown/restructuredText文档转换为pdf
 . Daysdiff - 计算输入日期和今日之间相隔天数，或输入两个日期，计算其相隔天数
-. Eog - 使用eog打开图片(png/jpg/jpeg/gif)，同时避免出现错误信息
+. Eog - 从命令行打开图片(png/jpg/jpeg/gif)，同时避免出现错误信息
 . Flash - 刷新交换分区
 . Git - 推送代码到多个平台
 . Getgitraw - 通过url从命令行下载github某账户仓库中的单个文件
 . Html2txt - 从html中提取文件内容为txt格式 
 . Killcmd - 输入命令名称(不用输完整的，只要确保惟一)以杀死进程
 . OpenHttpSrv - 利用python开启一个Http server，用于在局域网内分享文件
-. Pdf - 打开pdf文件
+. Pdf - 从命令行打开pdf文件，同时避免出现错误信息
 . Pidinfo - 输入PID以获取进程信息
 . Rm - /bin/rm的别称，该命令不删除而是将文件移动到/home/usrname/Trash中，防止误删
 . SystemInfo - 获取系统信息
 . Video2radio - 提取视频中的音频
-. Videocombine - 合并2个mp4视频为一个
+. Videocombine - 合并两个mp4视频为一个
 . Wechat - 用firefox打开网页版微信，可替换城chrome
 . YougetVideo - 用you-get从url或url文件下载音/视频/图片
 
