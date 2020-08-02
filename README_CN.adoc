@@ -93,7 +93,7 @@ texLive
 . Wechat - 用firefox打开网页版微信，可替换成chrome
 . YougetVideo - 用you-get从url或url文件下载音/视频/图片
 
-== 用法 (最好将这些命令加入/usr/local/bin/)
+== 用法 (最好将这些命令加入/usr/local/bin/), | 分割各种不同用法
 . Battery - `Battery`
 . Convert2mp4 - `Convert2mp4 video.flv`
 . Convert2pdf - `Convert2pdf file.txt/file.md/file.rst/file.docx`
