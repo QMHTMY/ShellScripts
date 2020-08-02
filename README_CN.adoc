@@ -72,7 +72,7 @@ texLive
 . Battery - 查看电池信息
 . Convert2mp4 - 用ffmpeg将flv/avi/mkv/mpeg/rmvb格式视频转换为mp4 
 . Convert2pdf - 用pandoc将txt/html/docx/markdown/restructuredText文档转换为pdf
-. Cpchigh - 显示最占用时间的10个进程
+. Cpuhigh - 显示最占用时间的10个进程
 . Daysdiff - 计算输入日期和今日之间相隔天数，或输入两个日期，计算其相隔天数
 . Eog - 从命令行打开图片(png/jpg/jpeg/gif)，同时避免出现错误信息
 . Flash - 刷新交换分区
