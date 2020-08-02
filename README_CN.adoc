@@ -90,7 +90,7 @@ texLive
 . SystemInfo - 获取系统信息
 . Video2radio - 提取视频中的音频
 . Videocombine - 合并两个mp4视频为一个
-. Wechat - 用firefox打开网页版微信，可替换城chrome
+. Wechat - 用firefox打开网页版微信，可替换成chrome
 . YougetVideo - 用you-get从url或url文件下载音/视频/图片
 
 == 用法 (最好将这些命令加入/usr/local/bin/)
