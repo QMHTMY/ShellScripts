@@ -71,6 +71,7 @@ texLive
 . Battery - show battery information
 . Convert2mp4 - use ffmpeg to convert flv/avi/mkv/mpeg/rmvb file to mp4 
 . Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
+. Cpuhigh - show the top 10 processes using most cpu time
 . Daysdiff - return days duration between today and a specified date or between two specified dates
 . Eog - use eog to open a picture (png/jpg/jpeg/gif) and avoid the errors message
 . Flash - clear out Swap space
@@ -78,6 +79,7 @@ texLive
 . Getgitraw - download a single file from github url 
 . Html2txt - extract content from html file and save to text 
 . Killcmd - kill a background job
+. Memhigh - show the top 10 processes using most memory
 . OpenHttpSrv - open a small http server to share files
 . Pdf - open a pdf file on cmd
 . Pidinfo - get the information of the process wiht PID
