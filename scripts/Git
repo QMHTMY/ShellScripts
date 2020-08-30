@@ -2,8 +2,8 @@
 #一行命令推送代码到多个源代码网站，下面的gitee和github需自行修改
 #你可能不用gitee而是用coding，那就将gitee换成coding等等
 
-echo "------------------1.Put to gitee-----------------------"
+echo "------------------1.Push to gitee-----------------------"
 git push gitee master
 echo ""
-echo "------------------2.Put to github----------------------"
+echo "------------------2.Push to github----------------------"
 git push github master
