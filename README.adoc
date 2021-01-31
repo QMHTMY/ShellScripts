@@ -15,7 +15,7 @@ endif::[]
 :uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
 
 == Description
-[link:README_CN.adoc[中文]] some shell scripts which can help you live a convenient life.
+[link:README_CN.adoc[中文]] Some shell scripts which can help you live a convenient life.
 
 == Compatible OS 
 * Linux 
@@ -31,6 +31,9 @@ endif::[]
 * opencc
 * pandoc
 * you-get
+* argparse
+* matplotlib
+* numpy
 * texlive
 
 == Installation
@@ -63,6 +66,15 @@ pandoc
 you-get
     sudo pip3 insatll you-get
 
+argparse
+    sudo pip3 install argparse
+
+matplotlib
+    sudo pip3 install matplotlib
+
+numpy
+    sudo pip3 install numpy
+
 texLive
     see http://tug.org/texlive/ #this is rather complex and time consuming
 ----
@@ -87,6 +99,7 @@ texLive
 . Simple2t - convert Simplified Chinese to Traditional Chinese.
 . Trademarks - convert Traditional Chinese to Simplified Chinese. 
 . SystemInfo - get te System information
+. SysFileSize - static System File Size
 . Video2radio - extract radio content from video
 . Videocombine - combine 2 video into single one
 . Wechat - open Tencent Wechat on web
@@ -110,6 +123,7 @@ texLive
 . Simple2t - `Simple2t 庆丰 |Simple2t simple.txt |Simple2t simple.txt traditional.txt`
 . Tradition2s - `Tradition2s 庆丰 |Tradition2s tradition.txt |Tradition2s tradition.txt simple.txt`
 . SystemInfo - `SystemInfo`
+. SysFileSize - `SysFileSize sysfile.txt`
 . Video2radio - `Video2radio video.mp4`
 . Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
 . Wechat - `Wechat`
@@ -121,7 +135,8 @@ texLive
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
 * https://samizdat.dev/help-message-for-shell-scripts/[Help message]
+* https://farseerfc.me/file-size-histogram.html[系統中的大多數文件有多大]
 
 == Copyright
-Copyright (C) 2019-2020 Shieber. +
-See the link:LICENSE[LICENSE] file for free use of these scripts granted under the terms of the Apache License.
+Copyright (C) 2019-2021 Shieber. +
+See the link:LICENSE[LICENSE] for free use of these scripts granted under the terms of the Apache License.

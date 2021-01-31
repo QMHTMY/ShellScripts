@@ -15,7 +15,7 @@ endif::[]
 :uri-readme-cn: https://github.com/QMHTMY/ShellScripts/blob/master/README_CN.adoc
 
 == 描述
-[link:README.adoc[English]] 一些有用的命令行Shell脚本。
+[link:README.adoc[English]] 一些有用的命令行 Shell 脚本。
 
 == 兼容系统
 * Linux 
@@ -31,6 +31,9 @@ endif::[]
 * opencc
 * pandoc
 * you-get
+* argparse
+* matplotlib
+* numpy
 * texlive
 
 == 安装
@@ -63,9 +66,18 @@ pandoc
 you-get
     sudo pip3 insatll you-get
 
+argparse
+    sudo pip3 insatll argparse
+
+matplotlib
+    sudo pip3 insatll matplotlib
+
+numpy
+    sudo pip3 insatll numpy
+
 texLive
     参见 http://tug.org/texlive/ #安装复杂，费时，但是安好用起也舒服。
-    或见 https://blog.csdn.net/Shieber/article/details/93716448，我已把所有安装步骤写好。
+    或见 https://blog.csdn.net/Shieber/article/details/93716448 ，我已把所有安装步骤写好。
 ----
 
 == 脚本功能
@@ -88,6 +100,7 @@ texLive
 . Simple2t - 转换简体中文为繁体中文
 . Trademarks - 转换繁体中文为简体中文 
 . SystemInfo - 获取系统信息
+. SysFileSize - 统计系统某路径下所有文件的大小情况
 . Video2radio - 提取视频中的音频
 . Videocombine - 合并两个mp4视频为一个
 . Wechat - 用firefox打开网页版微信，可替换成chrome
@@ -111,6 +124,7 @@ texLive
 . Simple2t - `Simple2t 庆丰 |Simple2t simple.txt |Simple2t simple.txt traditional.txt`
 . Tradition2s - `Tradition2s 庆丰 |Tradition2s tradition.txt |Tradition2s tradition.txt simple.txt`
 . SystemInfo - `SystemInfo`
+. SysFileSize - `SysFileSize sysfile.txt`
 . Video2radio - `Video2radio video.mp4`
 . Videocombine - `Videocombine 1.mp4 2.mp4 together.mp4`
 . Wechat - `Wechat`
@@ -122,6 +136,7 @@ texLive
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
 * https://samizdat.dev/help-message-for-shell-scripts/[Help message]
+*https://farseerfc.me/file-size-histogram.html[系統中的大多數文件有多大]
 
 == 版权声明
-Copyright (C) 2019-2020 Shieber，在 link:LICENSE[APACHE LICENSE]下开源。
+Copyright (C) 2019-2021 Shieber，在 link:LICENSE[APACHE LICENSE] 下开源。
