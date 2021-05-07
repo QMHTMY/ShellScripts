@@ -136,7 +136,7 @@ texLive
 * https://pandoc.org[pandoc]
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
-* https://samizdat.dev/help-message-for-shell-scripts[Help message]
+* https://samizdat.dev/help-message-for-shell-scripts[script help message]
 * https://farseerfc.me/file-size-histogram.html[系統中的大多數文件有多大]
 
 == Copyright
