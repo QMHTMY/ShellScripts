@@ -129,6 +129,10 @@ texLive
 . Wechat - `Wechat`
 . YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url`
 
+== Update log
+* 2021.05.07 `Eog` support https://daily.dev/blog/avif-the-next-gen-image-format[AVIF] format
+* 2020.07.09 initial update
+
 == Reference
 * https://ffmpeg.org[ffmpeg]
 * https://pandoc.org[pandoc]

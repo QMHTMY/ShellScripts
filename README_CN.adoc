@@ -130,6 +130,10 @@ texLive
 . Wechat - `Wechat`
 . YougetVideo - `YougetVideo https://www.youtube.com/xxx | video.url` #可用url或把url写入video.url
 
+== 更新日志
+* 2021.05.07 Eog 支持打开 https://zhuanlan.zhihu.com/p/355256489[AVIF] 图像格式
+* 2020.07.09 首次更新
+
 == 参考资料
 * https://ffmpeg.org[ffmpeg]
 * https://pandoc.org[pandoc]

@@ -4,21 +4,19 @@
 ### Description:
 ###     Eog — use eog to open image while avoiding error message.
 ###
-### Date: 2020.07.09
+### Date: 2021.05.07
 ### Author: Shieber
 ### Email: QMH_XB_FLTMY@yahoo.com
-### Denpendency:
-###     sudo apt install eog
 ###
 ### Usage:
 ###     Eog <image>
 ###
 ### Options:
 ###     <image>     Input a image.
-###     -h,--help   Display help message.
+###     -h,--help   Show help message.
 ###
 ### Support formats 
-###     .png .jpg .jpeg .gif
+###     .avif .gif .jpg .jpeg .png
 ###
 ### Example:
 ###     Eog car.png
@@ -39,7 +37,9 @@ else  #有参数，判断输入参数格式是否为图片并打开
         eog $1 >/dev/null 2>&1 &
     elif [ ${1##*.} = "gif"  ]; then
         eog $1 >/dev/null 2>&1 &
+    elif [ ${1##*.} = "avif"  ]; then
+        eog $1 >/dev/null 2>&1 &
     else
-        echo 'Wrong format, file must end with [png, jpg, jgep, gif]'
+        echo 'Wrong format! support formats are [avif|gif|jpg|jgep|png]'
     fi
 fi
