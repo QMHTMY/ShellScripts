@@ -1,9 +1,35 @@
 #!/bin/bash
-#一行命令推送代码到多个源代码网站，下面的gitee和github需自行修改
-#你可能不用gitee而是用coding，那就将gitee换成coding等等
+#输入git上某文件链接，提取其raw下载路径并自动下载
 
-echo "------------------1.Push to gitee-----------------------"
-git push gitee master
-echo ""
-echo "------------------2.Push to github----------------------"
-git push github master
+### Description:
+###     Getgitraw — download file from github file url
+###
+### Date: 2020.07.09
+### Author: Shieber
+### Email: QMH_XB_FLTMY@yahoo.com
+### Denpendency:
+###     sudo apt install axel
+###
+### Usage:
+###     Getgitraw   <url>
+###
+### Options:
+###     <url>       Input a github file url.
+###     -h,--help   Display help message.
+###
+### Example:
+###     Getgitraw https://github.com/user/repository/blob/master/filename.pdf
+help() {
+    sed -rn 's/^### ?//;T;p' "$0"
+}
+
+
+prefix="https://raw.githubusercontent.com/"
+
+if [[ $# == 0 ]] || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    help
+    exit 1
+else                               #参数为url，构造下载地址并下载
+    suffix=`echo $1 | sed 's/https:\/\/github.com\///' | sed 's/blob\///'`
+    axel -a $prefix$suffix
+fi

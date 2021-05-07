@@ -85,9 +85,8 @@ texLive
 . Convert2pdf - use pandoc to convert txt/html/docx/markdown/restructuredText file to pdf
 . Cpuhigh - show the top 10 processes using most cpu time
 . Daysdiff - return days duration between today and a specified date or between two specified dates
-. Eog - use eog to open a picture (png/jpg/jpeg/gif) and avoid the errors message
+. Eog - use eog to open a picture (avif/png/jpg/jpeg/gif) and avoid errors message
 . Flash - clear out Swap space
-. Git - push source code to multi-platform repository
 . Getgitraw - download a single file from github url 
 . Html2txt - extract content from html file and save to text 
 . Killcmd - kill a background job
@@ -112,7 +111,6 @@ texLive
 . Daysdiff - `Daysdiff 2020-06-30 | Daysdiff 2020-06-30 2020-08-21`
 . Eog - `Eog picture.png`
 . Flash - `Flash`
-. Git - `Git`
 . Getgitraw - `Getgitraw https://github.com/user/repository/filename` 
 . Html2txt - `Html2txt file.html | Html2txt`
 . Killcmd  - `Killcmd xelatex`
@@ -138,7 +136,7 @@ texLive
 * https://pandoc.org[pandoc]
 * http://tug.org/texlive[texlive]
 * https://github.com/soimort/you-get[you-get]
-* https://samizdat.dev/help-message-for-shell-scripts/[Help message]
+* https://samizdat.dev/help-message-for-shell-scripts[Help message]
 * https://farseerfc.me/file-size-histogram.html[系統中的大多數文件有多大]
 
 == Copyright
