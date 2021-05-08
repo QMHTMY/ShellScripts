@@ -1,12 +1,16 @@
 #!/bin/bash
+# Date: 2020.07.14
 # 用opencc进行简繁转换
 # sudo apt install opencc
 
 ### Description:
 ###     Simple2t — convert Simplified Chinese to Traditional Chinese.
 ###
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
+### Depnedency:
+###     sudo apt install opencc
 ###
 ### Usage:
 ###     Simple2t <s-chars>         

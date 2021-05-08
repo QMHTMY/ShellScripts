@@ -1,13 +1,14 @@
 #!/bin/bash
-#set -euxo pipefail
+# set -euxo pipefail
+# Date: 2020.07.09
 # 从视频文件中提取出音频
 
 ### Description:
 ###     Video2radio — use ffmpeg to extract radio from video.
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
 ### Denpendency:
 ###     sudo apt install ffmpeg 
 ### 

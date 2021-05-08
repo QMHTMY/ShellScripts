@@ -1,13 +1,14 @@
 #!/bin/bash
-#用atril打开pdf文件并放到后台运行
-#Ctrl + W可关闭文件
+# Date: 2020.07.09
+# 用atril打开pdf文件并放到后台运行
+# Ctrl + W可关闭文件
 
 ### Description:
 ###     Pdf — use atril to open pdf while avoiding error message.
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
 ### Denpendency:
 ###     sudo apt install atril
 ###

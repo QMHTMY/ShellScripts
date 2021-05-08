@@ -1,13 +1,13 @@
 #!/bin/bash
-#set -euxo pipefail
-#输入命令的名称(可以只是一部分)，自动杀死其进程
+# set -euxo pipefail
+# Date: 2020.07.09
+# 输入命令的名称(可以只是一部分)，自动杀死其进程
 
 ### Description:
 ###     Killcmd — use kill to kill process with a process name (or name pattern)
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Killcmd   <process-name>

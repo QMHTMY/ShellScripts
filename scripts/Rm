@@ -1,14 +1,14 @@
 #!/bin/bash
-#set -euxo pipefail
-#安全删除文件，将rm给管起来，误删可恢复
-#需要在某处创建一个垃圾箱目录如/home/username/Trash
+# set -euxo pipefail
+# Date: 2020.07.09
+# 安全删除文件，将rm给管起来，误删可恢复
+# 需要在某处创建一个垃圾箱目录如/home/username/Trash
 
 ### Description:
 ###     Rm — move file to Trash incase of delete file accidently.
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Rm <file>

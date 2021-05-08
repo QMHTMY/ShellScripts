@@ -1,14 +1,15 @@
 #!/bin/bash
-#set -euxo pipefail
+# set -euxo pipefail
+# Date: 2020.07.09
 # 输入视频作为参数 转换flv/avi/mkv/mov/mpeg/rmvb/wmv等格式视频为mp4格式，
 # 若无参数则转换当前目录下所有视频为mp4格式。
 
 ### Description:
 ###     Convert2mp4 — use ffmpeg to convert video to MP4 format
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
 ### Dependency:
 ###     sudo apt install ffmpeg
 ###

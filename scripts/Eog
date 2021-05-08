@@ -1,12 +1,12 @@
 #!/bin/bash
-#用eog查看图片
+# Date: 2021.05.07
+# 用eog查看图片
 
 ### Description:
 ###     Eog — use eog to open image while avoiding error message.
 ###
-### Date: 2021.05.07
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Eog <image>

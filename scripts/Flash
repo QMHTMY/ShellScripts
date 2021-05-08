@@ -1,12 +1,12 @@
 #!/bin/bash
-#刷新交换分区内容回硬盘并重开交换分区
+# Date: 2020.07.09
+# 刷新交换分区内容回硬盘并重开交换分区
 
 ### Description:
 ###     Flash — refesh PC Swap space
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Flash <password>

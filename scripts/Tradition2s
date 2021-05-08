@@ -1,12 +1,15 @@
 #!/bin/bash
+# Date: 2020.07.14
 # 用opencc进行繁简转换
-# sudo apt install opencc
 
 ### Description:
 ###     Tradition2s — convert Traditional Chinese to Simplified Chinese.
 ###
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
+### Dependency:
+###     sudo apt install opencc
 ###
 ### Usage:
 ###     Tradition2s <t-chars>

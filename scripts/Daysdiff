@@ -1,14 +1,13 @@
 #!/bin/bash
-#查找某日期距离今天的天数(可前也可后)
-#用零时时间戳计算，不用考虑小数问题
+# Date: 2020.07.13
+# 查找某日期距离今天的天数(可前也可后)
+# 用零时时间戳计算，不用考虑小数问题
 
 ### Description:
 ###     Daysago — calculate the days duration between date and today 
 ###               calculate the days duration between date1 and date2.
-###
-### Date: 2020.07.13
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Daysago <date>

@@ -1,4 +1,5 @@
 #!/bin/bash
 # 命令行打开网页版微信
 
-firefox https://wx.qq.com
+# firefox https://wx.qq.com
+google-chrome https://wx.qq.com

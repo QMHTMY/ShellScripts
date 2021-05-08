@@ -1,14 +1,14 @@
 #!/bin/bash
+# Date: 2020.07.09
 # 用you-get下载神器下载视频，
 # 按url逐个下载bilibili视频文件
-# sudo pip3 install you-get
 
 ### Description:
 ###     YougetVideo — Download video, radio from websites based on you-get
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
+###
 ### Denpendency:
 ###     sudo pip3 install you-get
 ###

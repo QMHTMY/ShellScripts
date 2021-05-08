@@ -1,12 +1,12 @@
 #!/bin/bash
+# Date: 2020.07.09
 # 根据用户输入的PID，过滤出该PID所有的信息
 
 ### Description:
 ###     Pidinfo — show the information about a process
 ###
-### Date: 2020.07.09
-### Author: Shieber
-### Email: QMH_XB_FLTMY@yahoo.com
+### Author: 
+###     Shieber https://github.com/QMHTMY
 ###
 ### Usage:
 ###     Pidinfo  <pid>
