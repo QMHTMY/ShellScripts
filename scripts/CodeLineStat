@@ -1,0 +1,10 @@
+#!/bin/bash                                                                                                                    
+ 
+# 统计代码提交者人数
+git log --pretty='%aN' | sort -u | wc -l
+ 
+# 统计代码提交前5名
+git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
+ 
+# 统计某人所有代码提交量
+git log --author=$(git config --get user.name) --pretty=tformat: --numstat | awk '{add += $1; subs += $2; total += $1 - $2} END {printf "you added: %s, removed: %s, total: %s\n", add, subs, total}'
